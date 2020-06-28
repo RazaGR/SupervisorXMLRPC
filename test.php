@@ -4,6 +4,7 @@ $api = new \Supervisor\Api('127.0.0.1', 9001 /* username, password */);
 // Call Supervisor API
 echo  $api->getApiVersion()."\n";
 echo $api->twiddlerGetAPIVersion()."\n";
+//TODO: check here is process is running than remove will run
 //$api->twiddlerRemoveProcessFromGroup('razalabs','razatest');
 echo "\Add program\n";
 $command = ['command' => 'ls -la /var/www','autostart' => 'false','autorestart' => 'false','startsecs' => '0'];
@@ -13,8 +14,8 @@ print_r($api->startProcess('razalabs:razatest'));
 echo "\nSTART LOG\n";
 print_r($api->getProcessInfo('razalabs:razatest'));
 sleep(2);
-#print_r($api->stopProcess('razalabs:razatest'));
-#echo "\nSTOP LOG\n";
+//print_r($api->stopProcess('razalabs:razatest'));
+//echo "\nSTOP LOG\n";
 print_r($api->getProcessInfo('razalabs:razatest'));
 
 
