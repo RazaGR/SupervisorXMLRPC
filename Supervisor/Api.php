@@ -187,7 +187,7 @@ class Api
     }
     public function readProcessLog($name, $offset, $length)
     {
-        return $this->__call('readProcessLog', $name, [$offset, $length]);
+        return $this->__call('readProcessLog', [$name, [$offset, $length]]);
     }
 
     /**
