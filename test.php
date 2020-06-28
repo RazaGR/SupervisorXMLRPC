@@ -9,6 +9,7 @@ print_r($api->twiddlerGetGroupNames());
 echo "\Add program\n";
 $command = json_encode(['command' => 'ls -l','autostart' => 'false','autorestart' => 'false','startsecs' => '0']);
 $command = 'ls -la && sleep 2';
+$command = ['command' => 'ls -l','autostart' => 'false','autorestart' => 'false','startsecs' => '0'];
 $api->twiddlerAddProgramToGroup('razalabs','razatest',$command);
 print_r($api->twiddlerGetGroupNames());
 echo "\nRemove\n";
