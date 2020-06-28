@@ -185,6 +185,10 @@ class Api
     {
         return $this->__call('readLog', [$offset, $length]);
     }
+    public function readProcessLog($name, $offset, $length)
+    {
+        return $this->__call('readProcessLog', $name, [$offset, $length]);
+    }
 
     /**
      * Clears the main log
