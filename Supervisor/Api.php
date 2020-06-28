@@ -559,12 +559,12 @@ class Api
 
     public function twiddlerAddProgramToGroup($name,$command)
     {
-        return $this->__call('twiddler.addProgramToGroup', ['group_name' , $name ,['command' , $command ]]);
+        return $this->__call('twiddler.addProgramToGroup', ['dynamic' , $name ,['command' , $command ]]);
     }
 
     public function twiddlerRemoveProcessFromGroup($name)
     {
-        return $this->__call('twiddler.removeProcessFromGroup', ['group_name' , $name]);
+        return $this->__call('twiddler.removeProcessFromGroup', ['dynamic' , $name]);
     }
 
     public function twiddlerLog($msg,$type='INFO')
