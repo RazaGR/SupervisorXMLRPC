@@ -7,10 +7,10 @@ echo  $api->getApiVersion()."\n";
 echo $api->twiddlerGetAPIVersion()."\n";
 print_r($api->twiddlerGetGroupNames());
 echo "\Add program\n";
-$api->twiddlerAddProgramToGroup('dynamic','razatest','ls');
+$api->twiddlerAddProgramToGroup('razalabs','razatest','ls');
 print_r($api->twiddlerGetGroupNames());
 echo "\nRemove\n";
-$api->twiddlerRemoveProcessFromGroup('dynamic','razatest');
+$api->twiddlerRemoveProcessFromGroup('razalabs','razatest');
 echo "\nAfter remove\n";
 print_r($api->twiddlerGetGroupNames());
 
