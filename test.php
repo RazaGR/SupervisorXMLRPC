@@ -18,7 +18,10 @@ print_r($api->stopProcess('razalabs:razatest'));
 echo "\nSTOP LOG\n";
 print_r($api->getProcessInfo('razalabs:razatest'));
 
-print_r($api->twiddlerGetGroupNames());
+
+echo "\nPROGRAM LOG\n";
+print_r($api->readProcessLog('razalabs:razatest', 0, 50));
+
 echo "\nRemove\n";
 $api->twiddlerRemoveProcessFromGroup('razalabs','razatest');
 echo "\nAfter remove\n";
