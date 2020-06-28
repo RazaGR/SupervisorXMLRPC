@@ -567,11 +567,6 @@ class Api
         return $this->__call('twiddler.removeProcessFromGroup', ['group_name' , $name]);
     }
 
-    public function twiddlerRemoveProcessFromGroup($name)
-    {
-        return $this->__call('twiddler.removeProcessFromGroup', ['group_name' , $name]);
-    }
-
     public function twiddlerLog($msg,$type='INFO')
     {
         return $this->__call('twiddler.log', [$msg, $type]);
