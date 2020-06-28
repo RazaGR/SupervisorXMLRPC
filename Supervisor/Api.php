@@ -547,4 +547,34 @@ class Api
         return $this->__call('system.multicall', [$calls]);
     }
 
+    public function twiddlerGetAPIVersion()
+    {
+        return $this->__call('twiddler.getAPIVersion');
+    }
+
+    public function twiddlerGetGroupNames()
+    {
+        return $this->__call('twiddler.getGroupNames');
+    }
+
+    public function twiddlerAddProgramToGroup($name,$command)
+    {
+        return $this->__call('twiddler.addProgramToGroup', ['group_name' , $name ,['command' , $command ]]);
+    }
+
+    public function twiddlerRemoveProcessFromGroup($name)
+    {
+        return $this->__call('twiddler.removeProcessFromGroup', ['group_name' , $name]);
+    }
+
+    public function twiddlerRemoveProcessFromGroup($name)
+    {
+        return $this->__call('twiddler.removeProcessFromGroup', ['group_name' , $name]);
+    }
+
+    public function twiddlerLog($msg,$type='INFO')
+    {
+        return $this->__call('twiddler.log', [$msg, $type]);
+    }
+
 }
