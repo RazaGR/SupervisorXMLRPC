@@ -13,7 +13,7 @@ $api->twiddlerAddProgramToGroup('razalabs','razatest',$command);
 print_r($api->startProcess('razalabs:razatest'));
 echo "\nSTART LOG\n";
 print_r($api->getProcessInfo('razalabs:razatest'));
-
+sleep(2);
 print_r($api->stopProcess('razalabs:razatest'));
 echo "\nSTOP LOG\n";
 print_r($api->getProcessInfo('razalabs:razatest'));
