@@ -1,4 +1,3 @@
-<?php
 require_once("vendor/autoload.php");
 $api = new \Supervisor\Api('127.0.0.1', 9001 /* username, password */);
 
@@ -7,7 +6,7 @@ echo  $api->getApiVersion()."\n";
 echo $api->twiddlerGetAPIVersion()."\n";
 //$api->twiddlerRemoveProcessFromGroup('razalabs','razatest');
 echo "\Add program\n";
-$command = ['command' => 'ls -la /var/www/html','autostart' => 'false','autorestart' => 'false','startsecs' => '0'];
+$command = ['command' => 'ls -la /var/www','autostart' => 'false','autorestart' => 'false','startsecs' => '0'];
 $api->twiddlerAddProgramToGroup('razalabs','razatest',$command);
 
 print_r($api->startProcess('razalabs:razatest'));
@@ -20,7 +19,7 @@ print_r($api->getProcessInfo('razalabs:razatest'));
 
 
 echo "\nPROGRAM LOG\n";
-print_r($api->readProcessLog('razalabs:razatest', 0, 500));
+print_r($api->readProcessLog('razalabs:razatest', 0, 5000));
 
 echo "\nRemove\n";
 $api->twiddlerRemoveProcessFromGroup('razalabs','razatest');
